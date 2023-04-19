@@ -15,38 +15,38 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>👍 New Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class=".weather-app-wrap">
+      <div class="weather-app-wrap">
         <div class="weather-app">
-          <h1>Boston</h1>
+          <h1 id="city"></h1>
           <ul>
             <li>Saturday 12:00pm</li>
-            <li>Weather conditions</li>
+            <li id="description"></li>
           </ul>
           <div class="row">
             <div class="col-6">
-              <div class="d-flex weather-temprature">
+              <div class="d-flex weather-temperature">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
                   alt="windy"
                   id="icon"
                 />
                 <div>
-                  <strong>10</strong
+                  <strong id="temperature"></strong
                   ><span class="units">°C | <a href="#">°F</a></span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Percipitation: 0%</li>
-                <li>Humidity: 0%</li>
-                <li>Wind: 0mph</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind-speed"></span> m/s</li>
               </ul>
             </div>
           </div>
@@ -61,6 +61,6 @@
         >
       </div>
     </div>
-    <script src="script" href="src/app.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>
