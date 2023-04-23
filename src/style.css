@@ -3,11 +3,12 @@ body {
 }
 
 h1 {
-  color: #878787;
+  color: #3c3b3b;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
-  margin-bottom: 0;
+  padding-top: 15px;
+  margin-bottom: 2px;
 }
 ul {
   margin: 0;
@@ -54,6 +55,6 @@ li::first-letter {
   color: rgb(33, 33, 33);
   cursor: default;
 }
-.weather-temperature .active a:hover {
+.weather-temperature .active:hover {
   text-decoration: none;
 }
