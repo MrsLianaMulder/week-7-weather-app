@@ -41,8 +41,20 @@ function displayTemperature(response) {
   );
 }
 
-let apiKey = "4039af31b689baf48b0o7t1d44c20851";
-let city = "Sacramento";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "4039af31b689baf48b0o7t1d44c20851";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Boston");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
