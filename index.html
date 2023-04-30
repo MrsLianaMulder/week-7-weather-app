@@ -29,7 +29,7 @@
               <div class="col-9">
                 <input
                   type="search"
-                  placeholder="Type a city..."
+                  placeholder="Search a city..."
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
@@ -38,47 +38,49 @@
               <div class="col-3">
                 <input
                   type="submit"
-                  value="search"
+                  value="→"
                   class="button btn btn-primary w-100"
                 />
               </div>
             </div>
           </form>
           <h1 id="city"></h1>
-          <ul>
-            <li>last updated: <span id="date"></span></li>
-            <li id="description"></li>
-          </ul>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
                   id="icon"
+                  width="50"
                 />
                 <div>
-                  <strong id="temperature"></strong
-                  ><span class="units">°F</span>
+                  <strong id="temperature"></strong>
+                  <span class="units">°F</span>
                 </div>
               </div>
+              <div class="date">Updated on <span id="date"></span></div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind Speed: <span id="wind-speed"></span> m/h</li>
+                <li id="description"></li>
+                <li>Humidity is <span id="humidity"></span>%</li>
+                <li>Wind Speed is <span id="wind-speed"></span> m/h</li>
               </ul>
             </div>
           </div>
+          <hr />
           <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small>
-          <a
-            href="https://github.com/MrsLianaMulder/week-7-weather-app"
-            target="_blank"
-            >Open-sourced code</a
+        <p>
+          <small>
+            <a
+              href="https://github.com/MrsLianaMulder/week-7-weather-app"
+              target="_blank"
+              >Open-sourced code</a
+            >
+            by Liana Emley</small
           >
-          by Liana Emley</small
-        >
+        </p>
       </div>
     </div>
     <script src="src/app.js"></script>
